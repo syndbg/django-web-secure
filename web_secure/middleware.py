@@ -19,3 +19,15 @@ class WebSecureMiddleware:
         self.content_type_nosniff = settings.SECURE_CONTENT_TYPE_NOSNIFF
         self.xss_filter = settings.SECURE_XSS_FILTER
 
+    def is_exempt(self, path):
+        return any(pattern.search(path) for pattern in self.exempt_hosts)
+
+    def process_request(self, request):
+        if self.enforce_ssl is None:
+            return None
+        elif self.enforce_ssl and not request.is_secure():
+            path = self.ssl_host.lstrip('/')
+            if not self.is_exempt(path):
+                host = self.ssl_host or request.get_host()
+                path = request.get_full_path()
+                return HttpResponsePermanentRedirect('https://{0}{1}'.format(host, path))
