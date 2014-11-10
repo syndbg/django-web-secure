@@ -35,3 +35,22 @@ class WebSecureMiddleware:
                 host = self.ssl_host or request.get_host()
                 path = request.get_full_path()
                 return HttpResponsePermanentRedirect('https://{0}{1}'.format(host, path))
+
+    def get_hsts_header(self):
+        header = ''
+        if self.hsts_max_age:
+            header += 'max-age={}'.format(self.hsts_max_age)
+            if self.hsts_include_subdomains:
+                header += '; includesubdomains'
+            if self.hsts_preload:
+                header += '; preload'
+        return header
+
+    def process_response(self, request, response):
+        if request.is_secure() and self.HSTS_HEADER not in response:
+            response[self.HSTS_HEADER] = self.get_hsts_header()
+        if self.content_type_nosniff and self.CONTENT_TYPE_OPTIONS_HEADER not in response:
+            response[self.CONTENT_TYPE_OPTIONS_HEADER] = 'nosniff'
+        if self.xss_filter and self.XSS_PROTECTION_HEADER not in response:
+            response[self.XSS_PROTECTION_HEADER] = '1; mode=block'
+        return response
