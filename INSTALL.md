@@ -1,4 +1,4 @@
-1. Add `django_web_secure` in `settings.py`, INSTALLED_APPS:
+**1)** Add `django_web_secure` in `settings.py`, INSTALLED_APPS:
 
 ```
 INSTALLED_APPS = (
@@ -16,7 +16,7 @@ INSTALLED_APPS = (
 ```
 
 
-2. Add `django_web_secure.middleware.WebSecureMiddleware` in `settings.py`, MIDDLEWARE_CLASSES
+**2)** Add `django_web_secure.middleware.WebSecureMiddleware` in `settings.py`, MIDDLEWARE_CLASSES
 
 It must added before `CommonMiddleware`!
 
@@ -35,7 +35,8 @@ MIDDLEWARE_CLASSES = (
 )
 ```
 
-3. Add and set the following settings in `settings.py`:
+3) Add and set the following settings in `settings.py`:
+
 
 * `SECURE_ENFORCE_SSL` = True/False (recommended True)
 * `SECURE_SSL_HOST` = 'https://example.com' (recommended your HTTPS host)
@@ -48,4 +49,5 @@ MIDDLEWARE_CLASSES = (
 * `SECURE_XSS_FILTER` = True/False to force enable Cross-site-scripting filter.
 
 
-4. Restart your Django web app.
+
+**4)** Restart your Django web app.
