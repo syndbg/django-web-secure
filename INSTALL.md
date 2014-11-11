@@ -39,7 +39,7 @@ MIDDLEWARE_CLASSES = (
 
 
 * `SECURE_ENFORCE_SSL` = True/False (recommended True)
-* `SECURE_SSL_HOST` = 'https://example.com' (recommended your HTTPS host)
+* `SECURE_SSL_HOST` = 'example.com' (recommended your HTTPS host)
 * `SECURE_EXEMPT_HOSTS` = 'regex string' containing any malicious (according to you) hosts
 * `SECURE_HSTS_MAX_AGE` = integer seconds (recommended `31536000` which equals 1 year).
 * `SECURE_HSTS_INCLUDE_SUBDOMAINS` = True/False, if you want subdomains-wide HSTS
