@@ -26,7 +26,7 @@ __All of these are options that you can turn on/off.__
 
 ## How to use:
 
-TODO: `INSTALL.md`
+Follow the instructions in [INSTALL.md](../blob/master/INSTALL.md)
 
 
 ## How to test:
