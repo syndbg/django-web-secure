@@ -18,7 +18,7 @@ INSTALLED_APPS = (
 
 **2)** Add `django_web_secure.middleware.WebSecureMiddleware` in `settings.py`, MIDDLEWARE_CLASSES
 
-It must added before `CommonMiddleware`!
+It must be added before `CommonMiddleware`!
 
 
 ```
