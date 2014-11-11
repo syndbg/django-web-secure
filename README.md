@@ -11,12 +11,10 @@ The middleware that makes ponies fly with a great sense of security.
 * https://wiki.mozilla.org/WebAppSec/Secure_Coding_Guidelines
 
 
-
-
-
 ## What can it do:
 
 * Force SSL,
+* Exempt hosts,
 * Enable HSTS, HSTS subdomains and HSTS preload,
 * Enable XSS Protection,
 * Enable nosniff,
@@ -30,6 +28,13 @@ __All of these are options that you can turn on/off.__
 
 TODO: `INSTALL.md`
 
+
+## How to test:
+
+Using
+
+* [Erik's Pony checkup](http://ponycheckup.com)
+* [SSL labs' SSL test](https://www.ssllabs.com/ssltest/)
 
 
 ## Docs:
