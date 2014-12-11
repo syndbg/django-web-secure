@@ -2,7 +2,7 @@
 
 The middleware that makes ponies fly with a great sense of security.
 
-![Flying pony](http://www.davidfischer.name/wp-content/uploads/2012/02/Securing-Your-Django-Site-Presentation/img/django-pony.png)
+![Flying pony](http://img.ffffound.com/static-data/assets/6/9b8451b7e1bbae1a4da67991bfea3d082aaea148_m.jpg)
 
 
 ## Inspiration:
