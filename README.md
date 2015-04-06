@@ -2,6 +2,8 @@
 
 The middleware that makes ponies fly with a great sense of security.
 
+*Important!* Newer Django as 1.7 or 1.8, implement this package's functionality, surely even better than myself. I recommend using the Django built-in middleware!
+
 ![Flying pony](http://img.ffffound.com/static-data/assets/6/9b8451b7e1bbae1a4da67991bfea3d082aaea148_m.jpg)
 
 
